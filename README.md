@@ -20,3 +20,21 @@ DB_DATABASE=db_name
 DB_USERNAME=user
 DB_PASSWORD=pass
 
+1-4 sail up
+
+$ ./vendor/bin/sail up -d
+
+1-5 sail npm install
+
+$ ./vendor/bin/sail npm install
+
+1-6 migrate
+
+$ ./vendor/bin/sail artisan migrate
+create database (yes)
+
+1-7 npm run
+
+$ ./vendor/bin/sail npm run dev
+
+1-8 access 127.0.0.1
