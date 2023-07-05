@@ -8,6 +8,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Redirect;
 use Illuminate\View\View;
+use App\Models\Tweet;
 
 class ProfileController extends Controller
 {
@@ -47,6 +48,12 @@ class ProfileController extends Controller
         ]);
 
         $user = $request->user();
+
+        // tweet削除処理
+        $tweets = Tweet::where('user_id', $user->id);
+
+        
+        exit();
 
         Auth::logout();
 
